@@ -13,5 +13,5 @@ def mfilter(g: Int => Boolean, xs: Seq[Int]): Seq[Int] = {
   }
 }
 
-println(mmap((x => x * 2), (1 to 5)))
+println(mmap((_*2), (1 to 5)))
 println(mfilter((x => x < 5), (1 to 9)))
