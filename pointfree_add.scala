@@ -5,4 +5,8 @@ println(add1(1))
 def add2 = add(1)
 println(add2(4))
 
+def add_ = add
+
+println(add_(1)(2))
+
 
