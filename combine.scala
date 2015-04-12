@@ -1,9 +1,9 @@
-def combine(a: Any, b: Any, c: Any) = {
+def combine[A] = (a: A) => (b: A) => (c: A) => {
   a +: b +: List(c)
 }
 
-val a = combine(1, _:Any, _:Any)
-val b = a(2, _:Any)
+val a = combine(1)
+val b = a(2)
 val c = b(3)
 println(c)
-println(combine('a','b','c'))
+println(combine('a')('b')('c'))
