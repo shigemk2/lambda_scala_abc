@@ -1,2 +1,2 @@
-println(((x: Int) => x + 1)(1))
+println(((x => x + 1): Int => Int)(1))
 
