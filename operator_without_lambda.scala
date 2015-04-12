@@ -1,4 +1,4 @@
-def f1(g: (Int) => Int) = g(1)
+def f1(g: Int => Int) = g(1)
 def f2(g: (Int, Int) => Int) = g(2, 3)
 
 // 新しい関数を定義してはいけない
