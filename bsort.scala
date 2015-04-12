@@ -1,13 +1,11 @@
 def bsort(list: List[Int]): List[Int] = {
-  def bswap(xs: List[Int]): List[Int] = {
-    xs match {
-      case xs if xs.isEmpty => Nil
-      case xs if xs.length == 1 => List(xs.head)
-      case xs => {
-        val ys = bswap(xs.tail)
-        if (xs.head > ys.head) ys.head :: xs.head :: ys.tail
-        else xs.head :: ys.head :: ys.tail
-      }
+  def bswap(xs: List[Int]): List[Int] = xs match {
+    case xs if xs.isEmpty => Nil
+    case xs if xs.length == 1 => List(xs.head)
+    case xs => {
+      val ys = bswap(xs.tail)
+      if (xs.head > ys.head) ys.head :: xs.head :: ys.tail
+      else xs.head :: ys.head :: ys.tail
     }
   }
 
