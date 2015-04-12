@@ -1,7 +1,7 @@
 def qsort(xs: List[Int]): List[Int] = {
   if (xs.length <= 1) xs
   else {
-    val pivot = xs(xs.length / 2)
+    val pivot = xs.head
     qsort(xs.filter(pivot >)) ++
     xs.filter(pivot ==) ++
     qsort(xs.filter(pivot <))
