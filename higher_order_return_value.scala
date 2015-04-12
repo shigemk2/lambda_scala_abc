@@ -1,5 +1,6 @@
-def add(x: Int): (Int) => Int = {
-  (y: Int) => x + y
+def add(x: Int): Int => Int = {
+  y: Int => x + y
+  // y => x + y
 }
 
 val add2 = add(2)
